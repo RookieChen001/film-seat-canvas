@@ -1,0 +1,346 @@
+@charset "UTF-8";
+html, html * {
+    -webkit-tap-highlight-color: transparent
+}
+
+html {
+    color: #000;
+    background: #fff;
+    overflow-y: scroll;
+    -ms-text-size-adjust: 100%;
+    padding: 0;
+    -webkit-text-size-adjust: 100%
+}
+
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none
+}
+
+body, html {
+    font-family: PingFangSC-Regular, sans-serif;
+    overflow: hidden;
+    height: 100%
+}
+
+article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0
+}
+
+input, select, textarea {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0;
+    vertical-align: top
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal
+}
+
+del {
+    text-decoration: line-through
+}
+
+address, caption, cite, code, dfn, th, var {
+    font-style: normal;
+    font-weight: 500
+}
+
+em {
+    font-weight: 500
+}
+
+ol, ul {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500
+}
+
+q:after, q:before {
+    content: ''
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -.5em
+}
+
+sub {
+    bottom: -.25em
+}
+
+a, a:hover, ins {
+    text-decoration: none
+}
+
+button, input[type=button], input[type=file], input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: none
+}
+
+.fl {
+    float: left
+}
+
+input {
+    -webkit-appearance: none
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clearfix {
+    clear: both;
+    zoom: 1
+}
+
+em, i {
+    font-style: normal
+}
+
+* {
+    cursor: pointer
+}
+
+.black-layer, .white-layer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 999;
+    display: none
+}
+
+.white-layer {
+    background: rgba(255, 255, 255, .5)
+}
+
+body, html {
+    background: #f5f5f5
+}
+
+.movieinfo {
+    background: #fff;
+    position: absolute;
+    top: 0
+}
+
+.movie-info {
+    padding: 0 0 0 .53333rem
+}
+
+.movie-info .movie-desc, .movie-info .movie-name {
+    font-size: 16px;
+    color: #161823;
+    padding: .26667rem .53333rem .13333rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+[data-dpr="2"] .movie-info .movie-name {
+    font-size: 32px
+}
+
+[data-dpr="3"] .movie-info .movie-name {
+    font-size: 48px
+}
+
+.movie-info .movie-desc {
+    border-bottom: .5px solid #e5e5e5;
+    color: #666;
+    font-size: 13px;
+    padding: .08rem 0 .32rem
+}
+
+[data-dpr="2"] .movie-info .movie-desc, [data-dpr="2"] .movie-seat-info .seat-selected li {
+    font-size: 26px
+}
+
+[data-dpr="3"] .movie-info .movie-desc, [data-dpr="3"] .movie-seat-info .seat-selected li {
+    font-size: 39px
+}
+
+.movie-seat-type {
+    overflow: hidden
+}
+
+.movie-seat-type li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    color: #666;
+    height: 1.06667rem
+}
+
+.movie-seat-type li .seat {
+    display: inline-block;
+    width: .42667rem;
+    height: .42667rem;
+    margin: 0 .10667rem 0 0;
+    vertical-align: -.08rem;
+    background-size: .42667rem .42667rem
+}
+
+.movie-seat-type li .active {
+    background-image: url(../img/seat-a.png)
+}
+
+.movie-seat-type li .selected {
+    background-image: url(../img/seat-selected.png)
+}
+
+.movie-seat-type li .disabled {
+    background-image: url(../img/seat-disabled.png)
+}
+
+.movie-seat-type li .love {
+    background-image: url(../img/seat-love.png)
+}
+
+.movie-seat-info {
+    overflow: hidden;
+    height: 1.06667rem;
+    padding: 0 0 0 .53333rem;
+    display: none
+}
+
+#seatTab li, .movie-seat-info .seat-selected li {
+    font-size: 13px;
+    padding: .13333rem;
+    margin: .13333rem .05333rem 0 0;
+    background: #fff;
+    border: .5px #e5e5e5 solid;
+    border-radius: 2px
+}
+
+.movie-seat-info .seat-selected li {
+    display: inline-block
+}
+
+.movie-seat-info .seat-price, .movie-seat-type li {
+    line-height: 1.06667rem
+}
+
+.seat-cont {
+    padding: 4.13333rem .10667rem;
+    width: 100% !important;
+    box-sizing: border-box;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: relative
+}
+.seat-list {
+    padding-left: .4rem
+}
+
+.seat-list li {
+    font-size: 0;
+    white-space: nowrap
+}
+
+.seat-list li .seat {
+    display: inline-block;
+    width: .64rem;
+    height: .64rem;
+    margin: 0 .10667rem .10667rem 0;
+    background-size: .64rem .64rem;
+    background-repeat: no-repeat
+}
+
+.seat-list li .active {
+    background-image: url(../img/seat-a.png)
+}
+
+.seat-list li .love {
+    background-image: url(../img/seat-love.png)
+}
+
+.seat-list li .selected {
+    background-image: url(../img/seat-selected.png)
+}
+
+.seat-list li .disabled {
+    background-image: url(../img/seat-disabled.png)
+}
+
+#seatTab {
+    padding-left: .53333rem;
+    height: 1.06667rem;
+    font-size: 0;
+    display: none
+}
+
+#seatTab li {
+    display: inline-block
+}
+
+#seatTab li.active {
+    color: #ff4d64;
+    border-color: #ff4d64
+}
+
+.mul-floor #seatTab {
+    display: block
+}
+
+.mul-floor .seat-cont {
+    padding-top: 5.2rem
+}
+
+.mul-floor .seat-screen {
+    top: 4rem
+}
+
+.mul-floor .seat-pos {
+    top: 4.66667rem
+}
+
+.seat-fee {
+    right: .53333rem;
+    top: .26667rem;
+    color: #999
+}
+
+[data-dpr="2"] .seat-fee {
+    font-size: 26px
+}
+
+[data-dpr="3"] .seat-fee {
+    font-size: 39px
+}
+
+.seat-selected {
+    white-space: nowrap;
+    overflow-x: scroll;
+}

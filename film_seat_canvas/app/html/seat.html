@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport"
+              content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+        <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>选座</title>
+        <script src="../js/lib/flexible.js"></script>
+        <link rel="icon" href="data:image/ico;base64,aWNv"><!-- 避免favicon.ico请求404 -->
+        <link rel="stylesheet" type="text/css" href="../css/seat.css" />
+        <style>
+        .seatlist {
+            position: relative;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+        #canvasImg { }
+        #canvasSeat {
+            position: absolute;left: 0;top:0;z-index: 99;opacity: 0;
+        }
+        .movieinfo {
+            position: static;
+        }
+        #seatTab li, .movie-seat-info .seat-selected li{
+            margin-bottom: 1px;
+        }
+        .seat-index {
+            position: absolute;
+            left: 0;
+            top:0;
+            min-width: 16px;
+            border-radius: 30px;
+            background-color: rgba(0,0,0,.3);
+            color: #fff;
+            font-size: 10px;
+            text-align: center;
+            padding: 0 3px;
+            box-sizing: border-box;
+        }
+        .seat-index li {
+            height: 22px;
+            line-height: 22px;
+        }
+        </style>
+	</head>
+
+	<body>
+        <!--电影、选中座位信息 Begin-->
+        <div class="movieinfo">
+            <div class="movie-info">
+                <h3 class="movie-name">电影选座</h3>
+                <p class="movie-desc">11-24 00:00:00  (英语 3D)  19号厅</p>
+            </div>
+            <ul class="movie-seat-type">
+                <li><span class="seat active"></span>可选</li>
+                <li><span class="seat selected"></span>已选</li>
+                <li><span class="seat disabled"></span>已售</li>
+                <li><span class="seat love"></span>情侣座</li>
+            </ul>
+            <div class="movie-seat-info">
+                <ul class="seat-selected" id="seatSelected">
+                </ul>
+            </div>
+            <ul id="seatTab">
+
+            </ul>
+        </div>
+
+        <!--影院座位 Begin-->
+        <div class="seatlist">
+            <canvas id="canvasSeat"></canvas>
+            <canvas id="canvasImg"></canvas>
+            <!--座位索引 Begin-->
+            <ul class="seat-index">
+                
+            </ul>
+        </div>
+
+        <script src="../js/lib/fastclick.min.js"></script>
+        <script src="../js/seat.js"></script>
+	</body>
+
+</html>
