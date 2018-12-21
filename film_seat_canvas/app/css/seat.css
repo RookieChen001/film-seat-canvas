@@ -350,8 +350,12 @@ body, html {
     -webkit-overflow-scrolling: touch;
 }
 #canvasImg { }
-#canvasSeat {
+#canvasSeat,#canvasSelected {
     position: absolute;left: 0;top:0;z-index: 99;opacity: 0;
+}
+#canvasSelected {
+    z-index: 9;
+    opacity: 1;
 }
 .movieinfo {
     position: static;
@@ -371,6 +375,7 @@ body, html {
     text-align: center;
     padding: 0 3px;
     box-sizing: border-box;
+    z-index:10;
 }
 .seat-index li {
     height: 22px;
